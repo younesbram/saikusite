@@ -1,0 +1,251 @@
+/* Base styles */
+:root {
+    --primary-color: #3f083a;
+    --secondary-color: #d61313;
+    --background-color: #33032b;
+    --text-light: #FFFFFF;
+    --shadow-color: rgba(43, 11, 11, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background-color);
+    color: var(--text-light);
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Improved title styles */
+.profile h1,
+.subpage-header h2 {
+    font-size: 3rem; /* Larger font size for a title */
+    font-weight: bold; /* Bold font weight */
+    text-shadow: 2px 2px 4px var(--shadow-color); /* Text shadow for depth */
+    margin-bottom: 1rem; /* Space below the title */
+    text-transform: uppercase; /* Makes the text uppercase */
+    letter-spacing: 2px; /* More spacing between letters */
+    color: var(--secondary-color); /* Adjust the color if needed */
+}
+
+/* Transition effect for the entire page */
+body {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Profile image hover effect */
+.profile-image img {
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for the image */
+}
+
+.profile-image:hover img {
+    opacity: 0; /* Makes the original image transparent on hover */
+}
+
+.profile-image:hover {
+    background: url('path/to/your/img2.jpeg') no-repeat center center; 
+    background-size: cover; /* Ensures the background image covers the area */
+}
+
+/* Profile */
+.profile {
+    text-align: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+}
+
+.profile h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+.profile p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+/* Mind map navigation */
+.mind-map {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.node {
+    background: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: var(--text-light);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.node:hover {
+    background: var(--secondary-color);
+    transform: translateY(-0.5rem);
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .node {
+        padding: 0.75rem 1.5rem;
+    }
+    .profile h1 {
+        font-size: 2rem;
+    }
+    .profile p {
+        font-size: 1rem;
+    }
+}
+
+/* Link to go back */
+.back-button {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: var(--text-light);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    z-index: 10;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: var(--secondary-color);
+}
+
+/* Image styling for subpages */
+.subpage-content-image {
+    width: 100%; /* Full width of the container */
+    max-width: 600px; /* Maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin: 1rem auto; /* Center the image horizontally with margin */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+    .subpage-content-image {
+        max-width: 100%; /* On smaller screens, allow the image to be full width */
+    }
+}
+
+/* Main content area styling */
+.content-section {
+    background: var(--primary-color);
+    padding: 2rem;
+    margin: 2rem auto; /* Centers the section and adds margin on all sides */
+    max-width: 800px; /* Sets a max width for the content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    color: var(--text-light);
+    text-align: left; /* Aligns text to the left for better readability */
+}
+
+/* Section titles */
+.content-section h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.content-section h4 {
+    color: var(--text-light);
+    margin-top: 1rem; /* Adds space before h4 headings */
+}
+
+/* Pull-up section-specific styles */
+.pull-up-section {
+    margin-top: 3rem; /* Adds space between sections */
+}
+
+/* Adjustments to content images */
+.subpage-content-image {
+    width: 100%; /* Makes the image responsive */
+    max-width: 600px; /* Maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin: 2rem auto; /* Center the image horizontally with margin */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Footer styling for content pages */
+.subpage-footer {
+    background: var(--background-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem 0;
+    position: static; /* Changed from fixed to static */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* ... (Other responsive adjustments remain unchanged) ... */
+
+    .content-section {
+        margin: 1rem; /* Reduces margin on smaller screens */
+    }
+}
+
+/* Additional styles for hover effect on profile image */
+.profile-image:hover img {
+    opacity: 0; /* Makes the image transparent on hover */
+}
+
+.profile-image:hover {
+    background: url('../images/img2.jpeg') no-repeat center; /* Shows the second image on hover */
+    background-size: cover; /* Ensures the background image covers the area */
+}

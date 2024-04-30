@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Saiku Sidi Sanyang's World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="profile-image">
+                <img src="images/profile-pic.jpg" alt="Saiku Sidi Sanyang" class="dynamic-image">
+            </div>
+            <h1>Saiku Sidi Sanyang</h1>
+            <p>Entrepreneur | Fitness Enthusiast | Cultural Advocate</p>
+        </div>
+        <!-- Navigation -->
+        <div class="mind-map">
+            <a href="content/fitness.html" class="node">Fitness</a>
+            <a href="content/islam-lifestyle.html" class="node">Islam & Lifestyle</a>
+            <a href="content/art.html" class="node">Art & Craft</a>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p>Let's create, inspire, and grow together.</p>
+            <p>Contact me for collaborations and inquiries.</p>
+        </footer>
+    </div>
+    <script>
+        // Script for hover image change
+        const profilePic = document.getElementById('profile-pic');
+        profilePic.addEventListener('mouseenter', () => {
+            profilePic.src = 'images/img2.jpeg';
+        });
+        
+    </script>
+</body>
+</html>
